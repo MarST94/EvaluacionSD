@@ -4,21 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Suma_Numeros
+namespace PromedioNumeros
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int suma = 0;
-            int numero = 0;
-            const int n = 10;
-            while (numero < n)
+            int i = 0;
+            float num, acu = 0;
+
+            while (i < 3)
             {
-                numero = numero + 1;
-                suma = suma + numero;
+                Console.Write("Ingrese {0}º número:", i + 1);
+                num = float.Parse(Console.ReadLine());
+                acu += num;
+                i++;
             }
-            System.Console.WriteLine("La suma es: " + suma);
+            Console.Write("El promedio de los 3 números es {0}", acu / 3);
             Console.Read();
         }
     }
