@@ -1,22 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Evaluacion_IM
+namespace Suma_Numeros
 {
-   static class Program
-   {
-      /// <summary>
-      /// The main entry point for the application.
-      /// </summary>
-      [STAThread]
-      static void Main()
-      {
-         Application.EnableVisualStyles();
-         Application.SetCompatibleTextRenderingDefault(false);
-         Application.Run(new Form1());
-      }
-   }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int suma = 0;
+            int numero = 0;
+            const int n = 10;
+            while (numero < n)
+            {
+                numero = numero + 1;
+                suma = suma + numero;
+            }
+            System.Console.WriteLine("La suma es: " + suma);
+            Console.Read();
+        }
+    }
 }
